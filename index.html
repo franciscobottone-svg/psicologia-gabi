@@ -25,21 +25,51 @@
             justify-content: center;
             text-align: center;
             padding: 80px 20px;
-            background: linear-gradient(to bottom, #F5EFE6, #FDFBF7); /* Degradado beige cálido */
+            background: linear-gradient(to bottom, #F5EFE6, #FDFBF7);
         }
-        .hero h1 {
-            font-size: 2.8rem;
-            margin-bottom: 10px;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin-bottom: 30px;
+        
+        /* Estilo para la foto de perfil */
+        .profile-img {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: top;
+            margin-bottom: 20px;
+            border: 5px solid white;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
         }
 
-        /* Botón */
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+            margin-top: 0;
+        }
+        
+        .subtitle {
+            font-size: 1.3rem;
+            color: #A39171;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin-bottom: 30px;
+            color: #666;
+        }
+
+        /* Botones */
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+
         .btn {
-            background-color: #A39171; /* Marrón claro / Dorado apagado */
+            background-color: #A39171;
             color: white;
             padding: 15px 30px;
             text-decoration: none;
@@ -49,10 +79,30 @@
             transition: background-color 0.3s ease;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             display: inline-block;
+            width: 250px;
         }
         .btn:hover {
             background-color: #8C7B6B;
             transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: #8C7B6B;
+            border: 2px solid #8C7B6B;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+            width: 250px;
+            box-sizing: border-box;
+        }
+        .btn-outline:hover {
+            background-color: #8C7B6B;
+            color: white;
         }
 
         /* Sección Sobre Mí */
@@ -61,15 +111,33 @@
             max-width: 800px;
             margin: 0 auto;
             text-align: center;
+            font-size: 1.1rem;
         }
         .sobre-mi h2 {
             font-size: 2rem;
             margin-bottom: 20px;
         }
 
+        /* Sección Primera Consulta (Destacada) */
+        .primera-consulta {
+            background-color: #ffffff;
+            padding: 40px;
+            max-width: 700px;
+            margin: 0 auto 60px auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            border-top: 4px solid #A39171;
+        }
+        
+        .primera-consulta p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
         /* Sección Servicios */
         .servicios {
-            background-color: #F5EFE6; /* Fondo distinto para contrastar */
+            background-color: #F5EFE6;
             padding: 60px 20px;
         }
         .servicios-container {
@@ -82,15 +150,16 @@
         }
         .servicio-card {
             background-color: white;
-            padding: 20px;
+            padding: 30px 20px;
             border-radius: 10px;
-            width: 250px;
+            width: 280px;
             text-align: center;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
         .servicio-card h3 {
             margin-top: 0;
             color: #A39171;
+            font-size: 1.3rem;
         }
 
         /* Footer */
@@ -98,7 +167,11 @@
             background-color: #8C7B6B;
             color: white;
             text-align: center;
-            padding: 30px 20px;
+            padding: 40px 20px;
+        }
+        footer a {
+            color: #FDFBF7;
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -106,34 +179,47 @@
 
     <!-- HERO SECTION -->
     <section class="hero">
-        <h1>Lic. Gabriela Sobral</h1>
-        <p>Un espacio seguro, profesional y confidencial para hablar, sanar y encontrar tu bienestar emocional. Atención personalizada.</p>
-        <!-- REEMPLAZA EL 00000 POR SU NÚMERO -->
-        <a href="https://wa.me/5493510000000" class="btn" target="_blank">Agendar una primera sesión</a>
+        <!-- Imagen de perfil con la extensión corregida -->
+        <img src="perfil.jpg.jpeg" alt="Lic. Gabriela Sobral" class="profile-img">
+        
+        <p class="subtitle">Psicóloga Clínica</p>
+        <h1>Hola, soy Gabriela Sobral</h1>
+        <p>Especializada en Terapia Cognitivo Conductual (TCC)</p>
+        
+        <div class="btn-container">
+            <a href="https://wa.me/5493515945085" class="btn" target="_blank">Agendar una sesión</a>
+            <a href="https://www.instagram.com/psico.gabrielasobral?igsh=MXA1OGUzMHlvajMwdw==" class="btn-outline" target="_blank">Visitar mi Instagram</a>
+        </div>
     </section>
 
     <!-- SOBRE MI -->
     <section class="sobre-mi">
-        <h2>Conoceme un poco más</h2>
-        <p>Soy Psicóloga Clínica comprometida con brindar un acompañamiento empático y profesional a mis pacientes. Mi objetivo es crear un ambiente libre de juicios donde podamos explorar juntos las herramientas necesarias para superar los desafíos diarios y mejorar tu calidad de vida.</p>
-        <!-- Acá podés agregar más texto sobre ella si querés -->
+        <h2>Un poco sobre mí</h2>
+        <p>Soy <strong>Licenciada en Psicología egresada de la Universidad Nacional de Córdoba.</strong></p>
+        <p>Acompaño procesos terapéuticos de adolescentes y adultos desde la Terapia Cognitivo Conductual (TCC) y Terapias Contextuales.</p>
+        <p>Me gusta definir la terapia como un trabajo en equipo: un espacio seguro y cálido, donde exploramos juntos qué cosas te están haciendo ruido hoy.</p>
+        <p><em>Si estás buscando un lugar para priorizarte, ¡llegaste al lugar indicado!</em></p>
     </section>
+
+    <!-- PRIMERA CONSULTA -->
+    <div class="primera-consulta">
+        <h2 style="margin-top:0; color: #8C7B6B;">Sobre la primera consulta</h2>
+        <p>Durante nuestro primer encuentro vamos a conocernos, conversar sobre el motivo de tu consulta y definir juntos los objetivos terapéuticos.</p>
+        <p><strong>No necesitás preparar nada previamente.</strong></p>
+        <p>Es un espacio para que puedas hablar con total tranquilidad y sin juicios.</p>
+    </div>
 
     <!-- SERVICIOS -->
     <section class="servicios">
-        <h2 style="text-align: center; margin-bottom: 40px;">¿En qué puedo ayudarte?</h2>
+        <h2 style="text-align: center; margin-bottom: 40px;">¿A quiénes acompaño?</h2>
         <div class="servicios-container">
             <div class="servicio-card">
-                <h3>Terapia Individual</h3>
-                <p>Acompañamiento personalizado para abordar ansiedad, estrés, angustia y desarrollo personal.</p>
+                <h3>Adolescentes</h3>
+                <p>Acompañamiento en una etapa de cambios, brindando herramientas para la gestión emocional, la ansiedad y el desarrollo de la identidad.</p>
             </div>
             <div class="servicio-card">
-                <h3>Orientación Vocacional</h3>
-                <p>Asesoramiento para descubrir tus intereses y potenciar tus habilidades para el futuro profesional.</p>
-            </div>
-            <div class="servicio-card">
-                <h3>Gestión Emocional</h3>
-                <p>Herramientas prácticas para manejar situaciones de crisis, duelos y conflictos vinculares.</p>
+                <h3>Adultos</h3>
+                <p>Abordaje de la ansiedad, el estrés, las crisis vitales y el desarrollo personal mediante intervenciones basadas en evidencia (TCC).</p>
             </div>
         </div>
     </section>
@@ -141,8 +227,11 @@
     <!-- FOOTER -->
     <footer>
         <h2>Lic. Gabriela Sobral</h2>
-        <p>Psicología Clínica y Terapia</p>
-        <p>Consultas por WhatsApp</p>
+        <p>Psicología Clínica y Terapias Contextuales</p>
+        <p>
+            <a href="https://www.instagram.com/psico.gabrielasobral?igsh=MXA1OGUzMHlvajMwdw==" target="_blank">Seguime en Instagram</a> | 
+            <a href="https://wa.me/5493515945085" target="_blank">Contactar por WhatsApp</a>
+        </p>
     </footer>
 
 </body>
