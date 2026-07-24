@@ -3,38 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lic. Gabriela - Psicóloga Clínica</title>
+    <title>Lic. Gabriela Sobral - Psicóloga Clínica</title>
     <style>
+        /* Estilos generales */
         body {
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #F7F9F6; /* Tono crema/verdoso muy relajante */
-            color: #333;
+            background-color: #FDFBF7; /* Beige muy clarito de fondo */
+            color: #4A4A4A;
+            line-height: 1.6;
         }
+        h1, h2, h3 {
+            color: #8C7B6B; /* Tono tierra cálido para los títulos */
+        }
+        
+        /* Sección Hero */
         .hero {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
-            height: 100vh;
-            padding: 0 20px;
-            background: linear-gradient(to bottom, #E8EFE8, #F7F9F6);
+            padding: 80px 20px;
+            background: linear-gradient(to bottom, #F5EFE6, #FDFBF7); /* Degradado beige cálido */
         }
-        h1 {
-            font-size: 3rem;
-            color: #2C4C3B; /* Verde oscuro que da confianza */
+        .hero h1 {
+            font-size: 2.8rem;
             margin-bottom: 10px;
         }
-        p {
+        .hero p {
             font-size: 1.2rem;
-            color: #555;
             max-width: 600px;
             margin-bottom: 30px;
-            line-height: 1.6;
         }
+
+        /* Botón */
         .btn {
-            background-color: #4A7C59;
+            background-color: #A39171; /* Marrón claro / Dorado apagado */
             color: white;
             padding: 15px 30px;
             text-decoration: none;
@@ -43,19 +48,102 @@
             font-weight: bold;
             transition: background-color 0.3s ease;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            display: inline-block;
         }
         .btn:hover {
-            background-color: #365D42;
+            background-color: #8C7B6B;
             transform: translateY(-2px);
+        }
+
+        /* Sección Sobre Mí */
+        .sobre-mi {
+            padding: 60px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .sobre-mi h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        /* Sección Servicios */
+        .servicios {
+            background-color: #F5EFE6; /* Fondo distinto para contrastar */
+            padding: 60px 20px;
+        }
+        .servicios-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .servicio-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .servicio-card h3 {
+            margin-top: 0;
+            color: #A39171;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #8C7B6B;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
         }
     </style>
 </head>
 <body>
+
+    <!-- HERO SECTION -->
     <section class="hero">
         <h1>Lic. Gabriela Sobral</h1>
-        <p>Un espacio seguro y confidencial para hablar, sanar y encontrar tu bienestar emocional. Atención personalizada.</p>
-        <!-- Reemplaza el número 351... por el WhatsApp real (el 351 es el código de Córdoba, déjalo si el número es de ahí) -->
-        <a href="https://wa.me/5493515945085" class="btn" target="_blank">Agendar una consulta</a>
+        <p>Un espacio seguro, profesional y confidencial para hablar, sanar y encontrar tu bienestar emocional. Atención personalizada.</p>
+        <!-- REEMPLAZA EL 00000 POR SU NÚMERO -->
+        <a href="https://wa.me/5493510000000" class="btn" target="_blank">Agendar una primera sesión</a>
     </section>
+
+    <!-- SOBRE MI -->
+    <section class="sobre-mi">
+        <h2>Conoceme un poco más</h2>
+        <p>Soy Psicóloga Clínica comprometida con brindar un acompañamiento empático y profesional a mis pacientes. Mi objetivo es crear un ambiente libre de juicios donde podamos explorar juntos las herramientas necesarias para superar los desafíos diarios y mejorar tu calidad de vida.</p>
+        <!-- Acá podés agregar más texto sobre ella si querés -->
+    </section>
+
+    <!-- SERVICIOS -->
+    <section class="servicios">
+        <h2 style="text-align: center; margin-bottom: 40px;">¿En qué puedo ayudarte?</h2>
+        <div class="servicios-container">
+            <div class="servicio-card">
+                <h3>Terapia Individual</h3>
+                <p>Acompañamiento personalizado para abordar ansiedad, estrés, angustia y desarrollo personal.</p>
+            </div>
+            <div class="servicio-card">
+                <h3>Orientación Vocacional</h3>
+                <p>Asesoramiento para descubrir tus intereses y potenciar tus habilidades para el futuro profesional.</p>
+            </div>
+            <div class="servicio-card">
+                <h3>Gestión Emocional</h3>
+                <p>Herramientas prácticas para manejar situaciones de crisis, duelos y conflictos vinculares.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <h2>Lic. Gabriela Sobral</h2>
+        <p>Psicología Clínica y Terapia</p>
+        <p>Consultas por WhatsApp</p>
+    </footer>
+
 </body>
 </html>
