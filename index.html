@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lic. Gabriela Sobral - Psicóloga Clínica</title>
     
-    <!-- Importamos tipografías de Google Fonts para igualar el estilo de las fotos -->
+    <!-- Importamos tipografías de Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     
     <style>
-        /* Variables de color basadas en tus fotos */
+        /* Variables de color */
         :root {
             --bg-crema: #FAF6F0;
             --texto-oscuro: #43423E;
@@ -24,19 +24,18 @@
         /* Estilos generales */
         body {
             margin: 0;
-            font-family: 'Montserrat', sans-serif; /* Letra moderna y limpia para textos */
+            font-family: 'Montserrat', sans-serif;
             background-color: var(--bg-crema);
             color: var(--texto-parrafo);
             line-height: 1.7;
         }
 
         h1, h2, h3 {
-            font-family: 'Lora', serif; /* Letra elegante para títulos */
+            font-family: 'Lora', serif;
             color: var(--texto-oscuro);
             font-weight: 600;
         }
 
-        /* Subtítulos pequeños en terracota (ej: QUIÉNES SOMOS) */
         .seccion-etiqueta {
             color: var(--terracota);
             text-transform: uppercase;
@@ -47,13 +46,12 @@
             display: block;
         }
 
-        /* Efecto de subrayado verde grueso */
         .resaltado-verde {
             background: linear-gradient(180deg, transparent 65%, var(--verde-salvia) 65%);
             display: inline;
         }
 
-        /* Encabezado superior tipo App (Header) */
+        /* Encabezado superior */
         header {
             background-color: var(--blanco);
             padding: 15px 20px;
@@ -88,14 +86,19 @@
             color: #888;
         }
 
-        /* Contenedor principal para centrar contenido */
+        /* Contenedores */
         .contenedor {
             max-width: 600px;
             margin: 0 auto;
             padding: 40px 20px;
         }
+        .contenedor-sin-padding-top {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 20px 40px 20px;
+        }
 
-        /* Imagen de perfil (Rectángulo con bordes redondeados) */
+        /* Imágenes */
         .profile-img {
             width: 100%;
             height: auto;
@@ -105,7 +108,17 @@
             box-shadow: 0 10px 25px rgba(0,0,0,0.08);
         }
 
-        /* Títulos principales */
+        .img-ambiente {
+            width: 100%;
+            height: auto;
+            max-height: 500px;
+            border-radius: 20px;
+            object-fit: cover;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            margin-bottom: 20px;
+        }
+
+        /* Títulos */
         h1 {
             font-size: 2.5rem;
             margin: 10px 0 20px 0;
@@ -116,10 +129,30 @@
             margin: 10px 0 20px 0;
             line-height: 1.2;
         }
-
         p {
             font-size: 1.05rem;
             margin-bottom: 20px;
+        }
+
+        /* Listas personalizadas */
+        .lista-ayuda {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+        .lista-ayuda li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+        }
+        .lista-ayuda li::before {
+            content: '•';
+            color: var(--terracota);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -5px;
         }
 
         /* Botones */
@@ -153,12 +186,12 @@
             text-align: center;
         }
 
-        /* Sección Primera Consulta (Fondo Terracota) */
+        /* Sección Primera Consulta */
         .seccion-terracota {
             background-color: var(--terracota);
             color: var(--blanco);
             padding: 60px 20px;
-            margin: 40px 0;
+            margin: 40px 0 30px 0; /* Menos margen abajo para dar paso a la foto */
         }
         .seccion-terracota h2 {
             color: var(--blanco);
@@ -212,12 +245,12 @@
 </head>
 <body>
 
-    <!-- HEADER (Barra superior) -->
+    <!-- HEADER -->
     <header>
         <div class="header-logo">GS</div>
         <div class="header-texto">
             <strong>Lic. Gabriela Sobral</strong>
-            <span>Psicóloga Clínica</span>
+            <span>Psicóloga Clínica · M.P. 16.087</span>
         </div>
     </header>
 
@@ -225,7 +258,7 @@
     <div class="contenedor">
         <img src="perfil.jpg.jpeg" alt="Lic. Gabriela Sobral" class="profile-img">
         
-        <span class="seccion-etiqueta">Psicóloga Clínica</span>
+        <span class="seccion-etiqueta">Psicóloga Clínica · M.P. 16.087</span>
         <h1>Hola, soy <br><span class="resaltado-verde">Gabriela Sobral</span></h1>
         
         <p>Especializada en <strong>Terapia Cognitivo Conductual (TCC)</strong></p>
@@ -237,8 +270,7 @@
     </div>
 
     <!-- SOBRE MI -->
-    <div class="contenedor" style="padding-top: 20px;">
-        <span class="seccion-etiqueta">Sobre Mí</span>
+    <div class="contenedor" style="padding-top: 10px;">
         <h2>Un poco <span class="resaltado-verde">sobre mí</span></h2>
         
         <p>Soy <strong>Licenciada en Psicología egresada de la Universidad Nacional de Córdoba.</strong></p>
@@ -257,9 +289,13 @@
         </div>
     </section>
 
-    <!-- SERVICIOS -->
-    <div class="contenedor">
-        <span class="seccion-etiqueta">Especialidades</span>
+    <!-- FOTO DEL CONSULTORIO (Nuevo) -->
+    <div class="contenedor-sin-padding-top">
+        <img src="fto_con.jpeg" alt="Espacio de consulta cálido y seguro" class="img-ambiente">
+    </div>
+
+    <!-- A QUIENES ACOMPAÑO -->
+    <div class="contenedor" style="padding-top: 10px;">
         <h2>¿A quiénes <span class="resaltado-verde">acompaño?</span></h2>
         
         <div style="margin-top: 30px;">
@@ -273,6 +309,26 @@
         </div>
     </div>
 
+    <!-- EN QUE PUEDO AYUDARTE (Nuevo) -->
+    <div class="contenedor" style="padding-top: 20px;">
+        <h2>¿En qué puedo <span class="resaltado-verde">ayudarte?</span></h2>
+        
+        <ul class="lista-ayuda">
+            <li>Ansiedad y ataques de pánico.</li>
+            <li>Estrés y sobrecarga emocional.</li>
+            <li>Angustia y sensación de vacío.</li>
+            <li>Baja autoestima e inseguridad.</li>
+            <li>Regulación emocional.</li>
+            <li>Duelos y procesos de pérdida.</li>
+            <li>Crisis vitales y cambios importantes.</li>
+            <li>Conflictos de pareja y familiares.</li>
+            <li>Dependencia emocional.</li>
+            <li>Miedo al rechazo y dificultad para poner límites.</li>
+            <li>Trastornos de ansiedad.</li>
+            <li>Crecimiento personal y autoconocimiento.</li>
+        </ul>
+    </div>
+
     <!-- BOTON FLOTANTE WHATSAPP -->
     <a href="https://wa.me/5493515945085" class="wa-flotante" target="_blank" title="Contactar por WhatsApp">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -283,7 +339,7 @@
     <!-- FOOTER -->
     <footer>
         <h2 style="color: var(--bg-crema); margin-bottom: 5px;">Lic. Gabriela Sobral</h2>
-        <p style="margin-top: 0; color: #999;">Psicología Clínica y Terapias Contextuales</p>
+        <p style="margin-top: 0; color: #999;">Psicóloga Clínica y Terapias Contextuales</p>
         <p style="margin-top: 30px;">
             <a href="https://www.instagram.com/psico.gabrielasobral?igsh=MXA1OGUzMHlvajMwdw==" target="_blank">Instagram</a> | 
             <a href="https://wa.me/5493515945085" target="_blank">WhatsApp</a>
